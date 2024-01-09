@@ -1,0 +1,13 @@
+@extends('front-protect-environment.front-master')
+@section('content')
+    @include('front-protect-environment.partials.carousel')
+    @include('front-protect-environment.partials.about-us')
+    @include('front-protect-environment.partials.what-we-do')
+    @include('front-protect-environment.partials.donation')
+    @include('front-protect-environment.partials.achivements')
+    @include('front-protect-environment.partials.recent-causes')
+    @include('front-protect-environment.partials.upcoming-events')
+    @include('front-protect-environment.partials.lates-news')
+    @include('front-protect-environment.partials.our-work')
+    @include('front-protect-environment.partials.become-a-volunteer')
+@endsection

@@ -32,25 +32,24 @@
             </button>
             <div class="collapse navbar-collapse bg-light" id="navbarCollapse">
                 <div class="navbar-nav ms-auto">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="causes.html" class="nav-item nav-link">Causes</a>
-                    <a href="events.html" class="nav-item nav-link">Events</a>
+                    <a href="{{route('index')}}" class="nav-item nav-link {{ (request()->is('/')) ? 'active' : '' }}">Home</a>
+                    <a href="{{route('front-about')}}" class="nav-item nav-link {{ (request()->is('about')) ? 'active' : '' }}">About</a>
+                    <a href="{{route('front-services')}}" class="nav-item nav-link {{ (request()->is('services')) ? 'active' : '' }}">Services</a>
+                    <a href="{{route('front-causes')}}" class="nav-item nav-link {{ (request()->is('causes')) ? 'active' : '' }}">Causes</a>
+                    <a href="{{route('front-events')}}" class="nav-item nav-link {{ (request()->is('events')) ? 'active' : '' }}">Events</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                            <a href="blog.html" class="dropdown-item">Blog</a>
-                            <a href="gallery.html" class="dropdown-item">Gallery</a>
-                            <a href="volunteer.html" class="dropdown-item">Volunteers</a>
-                            <a href="donation.html" class="dropdown-item">Donation</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
+                            <a href="{{route('front-blog')}}" class="dropdown-item {{ (request()->is('blog')) ? 'active' : '' }}">Blog</a>
+                            <a href="{{route('front-gallery')}}" class="dropdown-item {{ (request()->is('gallery')) ? 'active' : '' }}">Gallery</a>
+                            <a href="{{route('front-volunteers')}}" class="dropdown-item {{ (request()->is('volunteers')) ? 'active' : '' }}">Volunteers</a>
+                            <a href="{{route('front-donation')}}" class="dropdown-item {{ (request()->is('donation')) ? 'active' : '' }}">Donation</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="{{route('front-contact')}}" class="nav-item nav-link {{ (request()->is('contact')) ? 'active' : '' }}">Contact</a>
                 </div>
                 <div class="d-flex align-items-center flex-nowrap pt-xl-0" style="margin-left: 15px;">
-                    <a href="" class="btn-hover-bg btn btn-primary text-white py-2 px-4 me-3">Donate Now</a>
+                    <a href="{{route('login')}}" class="btn-hover-bg btn btn-primary text-white py-2 px-4 me-3">Login</a>
                 </div>
             </div>
         </nav>
