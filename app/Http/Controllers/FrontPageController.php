@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUs;
+use App\Models\Banner;
 use Illuminate\Http\Request;
 
 class FrontPageController extends Controller
 {
     public function index()
     {
-        return view('front-protect-environment.index');
+        $data['banners'] = Banner::get();
+        $data['aboutus'] = AboutUs::get();
+        return view('front-protect-environment.index',$data);
     }
     public function about()
     {
         $data['title'] = "About Us";
+        $data['aboutus'] = AboutUs::get();
         return view('front-protect-environment.front-about',$data);
     }
     public function services()

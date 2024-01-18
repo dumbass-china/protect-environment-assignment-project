@@ -1,6 +1,6 @@
 @extends('front-protect-environment.front-master')
 @section('content')
-    @include('front-protect-environment.partials.carousel')
+    @include('front-protect-environment.partials.banner')
     @include('front-protect-environment.partials.about-us')
     @include('front-protect-environment.partials.what-we-do')
     @include('front-protect-environment.partials.donation')
