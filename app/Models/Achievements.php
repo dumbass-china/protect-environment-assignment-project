@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
+class Achievements extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'subtitle', 'picturetitle','picturedescription','button','image'];
+    protected $fillable = ['title', 'description','boxtitle','boxsubtitle','button','image'];
 }
