@@ -1,6 +1,6 @@
 @extends('layouts.admin-app-master')
 @section('title')
-    Create About Us
+    Create What We Do
 @endsection
 @section('page_header')
     @push('page_header')
@@ -13,7 +13,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">About-Us Add</li>
+                            <li class="breadcrumb-item active"> What We Do Add</li>
                         </ol>
                     </div>
                 </div>
@@ -32,22 +32,22 @@
             {{ session('error') }}
         </div>
     @endif
-    <form action="{{ route('admin.aboutus.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.whatwedo.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-md-8">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">banner Info</h3>
+                        <h3 class="card-title">What We Do Info</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
 
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="title">Banner Title</label>
+                            <label for="title">Title</label>
                             <input type="text" name="title" class="form-control" id="title"
-                                placeholder="Enter Banner Title">
+                                placeholder="Enter Title">
                         </div>
                         <div class="form-group">
                             <label for="title"> Sub-Title</label>
@@ -55,41 +55,20 @@
                                 placeholder="Enter Sub Title">
                         </div>
                         <div class="form-group">
-                            <label for="description">Description</label>
-                            <input type="text" name="description" class="form-control" id="description"
-                                placeholder="Enter Banner description">
+                            <label for="title">Picture Title</label>
+                            <input type="text" name="picturetitle" class="form-control" id="picturetitle"
+                                placeholder="Enter Picture Title">
                         </div>
                         <div class="form-group">
-                            <label for="description">Button 1</label>
-                            <input type="text" name="button1" class="form-control" id="button1"
+                            <label for="description">Picture Description</label>
+                            <input type="text" name="picturedescription" class="form-control" id="picturedescription"
+                                placeholder="Enter Picture Description">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Button</label>
+                            <input type="text" name="button" class="form-control" id="button"
                                 placeholder="Enter Button Name">
                         </div>
-                        <div class="form-group">
-                            <label for="description">Button 2</label>
-                            <input type="text" name="button2" class="form-control" id="button2"
-                                placeholder="Enter Button Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Button 3</label>
-                            <input type="text" name="button3" class="form-control" id="button3"
-                                placeholder="Enter Button Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Button 4</label>
-                            <input type="text" name="button4" class="form-control" id="button4"
-                                placeholder="Enter Button Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="title">Box Title</label>
-                            <input type="text" name="boxtitle" class="form-control" id="boxtitle"
-                                placeholder="Enter Box Title">
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Box Description</label>
-                            <input type="text" name="boxdescription" class="form-control" id="boxdescription"
-                                placeholder="Enter Box Description">
-                        </div>
-
                     </div>
                     <!-- /.card-body -->
 
@@ -123,7 +102,7 @@
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-success btn-block">Save</button>
-                        <a href="{{ route('admin.aboutus') }}" class="btn btn-danger btn-block">Cancel</a>
+                        <a href="{{route('admin.whatwedo')}}" class="btn btn-danger btn-block">Cancel</a>
                     </div>
 
                 </div>

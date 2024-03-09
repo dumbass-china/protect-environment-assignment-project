@@ -17,11 +17,13 @@ return new class extends Migration
             $table->string('subtitle');
             $table->string('picturetitle');
             $table->string('picturesubtitle');
+            $table->string('picturesubtitle2');
             $table->text('picturedescription');
             $table->string('picturebutton');
             $table->string('button');
             $table->string('image');
             $table->timestamps();
+
         });
     }
 

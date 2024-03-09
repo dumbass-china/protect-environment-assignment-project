@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('boxtitle');
             $table->string('boxsubtitle');
             $table->string('button');
-            $table->string('image');
+            $table->string('icon');
             $table->timestamps();
         });
     }

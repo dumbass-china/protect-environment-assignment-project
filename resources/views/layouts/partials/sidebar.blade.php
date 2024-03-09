@@ -35,7 +35,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('admin.whatwedo')}}" class="nav-link">
                         <i class="nav-icon fa fa-globe" aria-hidden="true"></i>
                         <p>
                             Manage What We Do
@@ -45,7 +45,16 @@
 
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('admin.achievements')}}" class="nav-link">
+                        <i class="nav-icon fa fa-trophy"></i>
+                        <p>
+                            Manage Achievements
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('admin.donation')}}" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Manage Donation
@@ -54,7 +63,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('admin.recentcauses')}}" class="nav-link">
                         <i class="nav-icon fa fa-users" aria-hidden="true"></i>
                         <p>
                             Manage Recent Causes

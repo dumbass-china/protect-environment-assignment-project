@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\AboutUs;
 use App\Models\Banner;
+use App\Models\Donation;
+use App\Models\WhatWeDo;
 use Illuminate\Http\Request;
 
 class FrontPageController extends Controller
@@ -12,6 +14,8 @@ class FrontPageController extends Controller
     {
         $data['banners'] = Banner::get();
         $data['aboutus'] = AboutUs::get();
+        $data['whatwedo'] = WhatWeDo::get();
+        $data['donation'] = Donation::get();
         return view('front-protect-environment.index',$data);
     }
     public function about()

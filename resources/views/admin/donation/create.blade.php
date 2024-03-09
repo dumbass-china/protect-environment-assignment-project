@@ -1,6 +1,6 @@
 @extends('layouts.admin-app-master')
 @section('title')
-    Create About Us
+    Create Donation
 @endsection
 @section('page_header')
     @push('page_header')
@@ -8,12 +8,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>About-Us Add</h1>
+                        <h1>Donation Add</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">About-Us Add</li>
+                            <li class="breadcrumb-item active">Donation Add</li>
                         </ol>
                     </div>
                 </div>
@@ -32,62 +32,57 @@
             {{ session('error') }}
         </div>
     @endif
-    <form action="{{ route('admin.aboutus.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.donation.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-md-8">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">banner Info</h3>
+                        <h3 class="card-title">Donation Info</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
 
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="title">Banner Title</label>
-                            <input type="text" name="title" class="form-control" id="title"
-                                placeholder="Enter Banner Title">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title">
                         </div>
+
                         <div class="form-group">
-                            <label for="title"> Sub-Title</label>
-                            <input type="text" name="subtitle" class="form-control" id="subtitle"
-                                placeholder="Enter Sub Title">
+                            <label for="subtitle">Sub-Title</label>
+                            <input type="text" name="subtitle" class="form-control" id="subtitle" placeholder="Enter Sub Title">
                         </div>
+
                         <div class="form-group">
-                            <label for="description">Description</label>
-                            <input type="text" name="description" class="form-control" id="description"
-                                placeholder="Enter Banner description">
+                            <label for="picturetitle">Picture Title</label>
+                            <input type="text" name="picturetitle" class="form-control" id="picturetitle" placeholder="Enter Picture Sub-Title1">
                         </div>
+
+
                         <div class="form-group">
-                            <label for="description">Button 1</label>
-                            <input type="text" name="button1" class="form-control" id="button1"
-                                placeholder="Enter Button Name">
+                            <label for="picturetitle">Picture Sub-Title1</label>
+                            <input type="text" name="picturesubtitle" class="form-control" id="picturesubtitle" placeholder="Enter Picture Sub-Title1">
                         </div>
+
                         <div class="form-group">
-                            <label for="description">Button 2</label>
-                            <input type="text" name="button2" class="form-control" id="button2"
-                                placeholder="Enter Button Name">
+                            <label for="picturesubtitle2">Picture Sub-Title2</label>
+                            <input type="text" name="picturesubtitle2" class="form-control" id="picturesubtitle2" placeholder="Enter Picture Sub-Title2">
                         </div>
+
                         <div class="form-group">
-                            <label for="description">Button 3</label>
-                            <input type="text" name="button3" class="form-control" id="button3"
-                                placeholder="Enter Button Name">
+                            <label for="picturedescription">Picture Description</label>
+                            <input type="text" name="picturedescription" class="form-control" id="picturedescription" placeholder="Enter Picture Description">
                         </div>
+
                         <div class="form-group">
-                            <label for="description">Button 4</label>
-                            <input type="text" name="button4" class="form-control" id="button4"
-                                placeholder="Enter Button Name">
+                            <label for="picturebutton">Picture Button</label>
+                            <input type="text" name="picturebutton" class="form-control" id="picturebutton" placeholder="Enter Picture Button Name">
                         </div>
+
                         <div class="form-group">
-                            <label for="title">Box Title</label>
-                            <input type="text" name="boxtitle" class="form-control" id="boxtitle"
-                                placeholder="Enter Box Title">
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Box Description</label>
-                            <input type="text" name="boxdescription" class="form-control" id="boxdescription"
-                                placeholder="Enter Box Description">
+                            <label for="button">Button</label>
+                            <input type="text" name="button" class="form-control" id="button" placeholder="Enter Button Name">
                         </div>
 
                     </div>
@@ -123,7 +118,7 @@
 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-success btn-block">Save</button>
-                        <a href="{{ route('admin.aboutus') }}" class="btn btn-danger btn-block">Cancel</a>
+                        <a href="{{route('admin.donation')}}" class="btn btn-danger btn-block">Cancel</a>
                     </div>
 
                 </div>

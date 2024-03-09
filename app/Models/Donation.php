@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Donation extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'subtitle', 'picturetitle','picturesubtitle','picturedescription','picturebutton','button','image'];
+    protected $table = 'donation'; // Explicitly set the table name
+
+    protected $fillable = ['title', 'subtitle', 'picturetitle','picturesubtitle','picturesubtitle2','picturedescription','picturebutton','button','image'];
 }

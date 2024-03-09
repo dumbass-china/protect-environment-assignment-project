@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Achievements extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description','boxtitle','boxsubtitle','button','image'];
+    protected $table = 'achievements'; // Explicitly set the table name
+
+    protected $fillable = ['title', 'description', 'boxtitle',
+
+    'boxsubtitle', 'button', 'icon'];
 }

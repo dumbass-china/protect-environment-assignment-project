@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('boxdescription');
             $table->string('goal'); // Assuming 'goal' is an integer, adjust if it's another data type
             $table->string('raised'); // Assuming 'raised' is an integer, adjust if it's another data type
-            $table->decimal('percentage', 5, 2); // Assuming 'percentage' is a decimal, adjust precision and scale as needed
+            $table->string('percentage'); // Assuming 'percentage' is a decimal, adjust precision and scale as needed
             $table->string('button1');
             $table->string('button2');
             $table->string('image');

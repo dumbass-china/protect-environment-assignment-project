@@ -6,7 +6,7 @@
             <div class="col-xl-5">
                 <div class="h-100">
                     {{-- <img src="{{asset('protect-environment')}}/img/about-1.jpg" class="img-fluid w-100 h-100" alt="Image"> --}}
-        <img src="{{ asset('storage/uploads/' . $row->image) }}" class="img-fluid" alt="Image">
+                     <img src="{{ asset('storage/uploads/' . $row->image) }}" class="img-fluid" alt="Image">
 
                 </div>
             </div>
@@ -23,7 +23,7 @@
                         </li>
                         <li class="nav-item mb-3">
                             <a class="d-flex py-2 mx-3 text-center bg-white" data-bs-toggle="pill" href="#tab-2">
-                                <span class="text-dark" style="width: 150px;">{{ $row->button2}}</span>
+                                <span class="text-dark" style="width: 150px;">{{ $row->button2}}</span>ត
                             </a>
                         </li>
                         <li class="nav-item mb-3">
